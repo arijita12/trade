@@ -32,7 +32,7 @@ public class TradeValidation {
 	private String selectTradeQuery;
 
 	public boolean validateTradeAttributes(TradeDTO tradeDto) throws ParseException {
-		DateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
+		DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 		Date parseDate = (Date) formatter.parse(tradeDto.getMaturityDate());
 
 		if (parseDate.before(new Date())) {
